@@ -6,6 +6,8 @@ import {
   Button,
   SafeAreaView,
   Image,
+  TouchableOpacity,
+  
 } from "react-native";
 
 export default function App() {
@@ -13,8 +15,11 @@ export default function App() {
   const photoURI = "https://picsum.photos/200/300";
   return (
     <SafeAreaView style={styles.SafeView}>
-      <Image source={icon} width={"50%"} />
+      <TouchableOpacity onPress={()=>console.log('touched')}>
+
       <Image source={{ uri: photoURI, width: 200, height: 300 }} />
+      </TouchableOpacity>
+      <Image source={icon} width={"50%"} />
       <Text>hello world</Text>
       <Button title="click me" />
       <StatusBar style="auto" />
